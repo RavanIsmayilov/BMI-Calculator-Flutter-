@@ -27,17 +27,8 @@ class _SplashState extends State<Splash> {
     bool isFirstLaunch = box.get('isFirstLaunch', defaultValue: true);
 
     if (isFirstLaunch) {
-      // İlk dəfə açılış üçün göstərin və sonra dəyəri yeniləyin
-      await box.put('isFirstLaunch', false);
-
-      Future.delayed(const Duration(seconds: 3), () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => Pager.home),
-        );
-      });
+      await box.put('isFirstLaunch', true);
     } else {
-      // Splash keçid etmədən birbaşa əsas ekrana keçin
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Pager.home),

@@ -13,7 +13,7 @@ class CustomHeightCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bmiProvider = Provider.of<BmiProvider>(context, listen: false);
+    final bmiProvider = Provider.of<BmiProvider>(context);
 
     return Padding(
       padding: AppPaddings.h10,
